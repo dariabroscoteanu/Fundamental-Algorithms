@@ -34,12 +34,14 @@ void DFS(int x){
                 y = tata[y];
             }
             cout << z << " " << x;
-            exit(0);
+            //exit(0);
         }
     }
 
 }
 int main(){
     citire();
-    DFS(1);
+    for(int i = 1;i <= nrNoduri; ++i)
+        if(vizitat[i] == 0)
+            DFS(i);
 }
